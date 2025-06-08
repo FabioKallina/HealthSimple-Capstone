@@ -1,0 +1,116 @@
+
+.set-overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.setRow {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.setRow.completed {
+    background-color: rgba(1, 101, 1, 0.628);
+}
+
+.setRow.completed input {
+    background-color: rgba(0, 81, 0, 0.588);
+    border: 1px solid rgba(0, 128, 0, 0.628);
+    color: #999;
+}
+
+.setRow.setRow.completed .set-number {
+    background-color: rgba(0, 78, 0, 0.628);
+    color: rgb(179, 179, 179);
+}
+
+.setRow.completed button {
+    background-color: rgba(0, 78, 0, 0.628);
+    color: white;
+    border: 1px solid darkgreen;
+}
+
+.setRow.completed .set-number-display h3 {
+    color: darkgreen;
+}
+
+.setRow.completed .button-container .done {
+    background-color: rgba(0, 78, 0, 0.628);
+}
+
+.input-pair {
+    display: flex;
+    align-items: flex-end;
+    gap: 2rem;
+}
+
+.set-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #0077b6;
+    margin-bottom: -7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-group label {
+    margin-bottom: 0.7rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #0077b6;
+}
+
+.input-group input {
+    font-size: 1.5rem;
+    border-radius: 8px;
+    background-color: #fff;
+    width: 150px;
+    text-align: center;
+    color: black;
+    border-color: #0077b6;
+}
+
+.input-group p {
+    font-size: 1.5rem;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 1rem;
+}
+
+.exercise-btns-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    gap: 1rem;
+}
+
+.add-set-btn {
+    color: #449a73;
+    font-size: 1.2rem;
+    width: 300px;
+    background-color: aliceblue;
+    border-color: #449a73;
+}
+
+.remove-btn {
+    color: red;
+    font-size: 1.2rem;
+    background-color: aliceblue;
+    border-color: red;
+}

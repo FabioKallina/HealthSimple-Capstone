@@ -1,0 +1,116 @@
+.mindfulness-container {
+  width: 80%;
+  margin: 2rem auto;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: aliceblue;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+}
+
+.mindfulness-container h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #0077b6;
+}
+
+.breathing-container,
+.affirmation-container,
+.meditation-container {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.breathing-container h3,
+.affirmation-container h3,
+.meditation-container h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  margin-top: 2rem;
+  color: #023e8a;
+}
+
+.breath-display {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0096c7;
+  animation: pulse-breath 10s ease-in-out infinite;
+}
+
+@keyframes pulse-breath {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+}
+
+.affirmation-container p {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.affirmation-btn {
+  background-color: #8e44ad;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.affirmation-btn:hover {
+  background-color: #732d91;
+}
+
+.meditation-timer {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0077b6;
+  margin-top: 0.5rem;
+}
+
+.timer-display {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 20px;
+}
+
+.meditation-timer-btn {
+  background-color: #52b788;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.meditation-timer-btn:hover {
+  background-color: #40916c;
+}
+
+/* MEDIUM SCREENS (tablets, < 1024px) */
+@media (max-width: 1024px) {
+  .mindfulness-container {
+    width: 90%;
+  }
+}
+
+/* SMALL SCREENS (phones, < 768px) */
+@media (max-width: 768px) {
+  .mindfulness-container {
+    width: 90%;
+  }
+}

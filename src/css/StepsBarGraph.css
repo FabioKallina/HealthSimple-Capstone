@@ -1,0 +1,32 @@
+
+.steps-graph-container {
+    background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.steps-form {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.steps-form input {
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  width: 170px;
+  font-size: 1.1rem;
+  background-color: aliceblue;
+  color: #333;
+  border: 1px solid #db342a;
+}
+
+.add-steps-btn {
+  background-color: #db342a;
+  width: 60px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}

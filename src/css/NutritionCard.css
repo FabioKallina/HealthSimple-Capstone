@@ -1,0 +1,104 @@
+.nutrition-card {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  margin-bottom: 30px;
+  width: 80%;
+  border-radius: 10px;
+  background-color: aliceblue;
+}
+
+.nutrition-card-header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nutrition-card-header h3 {
+  color: #0077b6;
+}
+
+.meal-calories {
+  font-size: 1.2rem;
+  color: #00a63d;
+  font-weight: bold;
+}
+
+.logged-food-list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.food-logged {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  background-color: #fff;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.food-logged h3 {
+  color: #000;
+}
+
+.food-logged p {
+  font-size: 1.1rem;
+}
+
+.remove-food-btn {
+  background: none;
+  padding: 10px;
+}
+
+.remove-food-btn:hover {
+  background-color: white;
+}
+
+.add-food-btn {
+  width: 100%;
+  background-color: #0077b6;
+  color: aliceblue;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.add-food-btn:hover {
+  background-color: aliceblue;
+  color: #0077b6;
+  border-color: #0077b6;
+}
+
+/* MEDIUM SCREENS (tablets, < 1024px) */
+@media (max-width: 1024px) {
+}
+
+/* SMALL SCREENS (phones, < 768px) */
+@media (max-width: 768px) {
+
+    .nutrition-card {
+        width: 90%;
+    }
+
+  .food-logged {
+    gap: 2rem;
+  }
+
+  .food-logged h3 {
+    font-size: 1rem;
+  }
+
+}

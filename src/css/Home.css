@@ -1,0 +1,49 @@
+.home-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  grid-auto-rows: minmax(400px, auto);
+}
+
+.nutrition-pie-chart {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.workout-stats-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.habit-streaks-card {
+  padding: 1rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.habit-streaks-card span {
+    color: black;
+    font-size: 1.1rem;
+}
+
+.streak-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+/* MEDIUM SCREENS (tablets, < 1024px) */
+@media (max-width: 1024px) {
+  
+}
+
+@media (max-width: 768px) {
+  
+}

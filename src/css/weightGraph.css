@@ -1,0 +1,31 @@
+.weight-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.weight-form {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.weight-form input {
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  width: 170px;
+  font-size: 1.1rem;
+  background-color: aliceblue;
+  color: #333;
+  border: 1px solid #8e2adb;
+}
+
+.weight-form button {
+  background-color: #8e2adb;
+  width: 60px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}

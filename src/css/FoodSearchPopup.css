@@ -1,0 +1,201 @@
+.food-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.food-popup-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: aliceblue;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 50%;
+  height: 90%;
+  border: 1px solid #333;
+  overflow-y: auto;
+}
+
+.food-close-btn {
+  background-color: #0077b6;
+  transition: background-color 0.3s ease;
+}
+
+.food-close-btn:hover {
+  background-color: aliceblue;
+  color: #0077b6;
+  border-color: #0077b6;
+}
+
+.food-search-btn {
+  background-color: #0077b6;
+  transition: background-color 0.3s ease;
+}
+
+.food-search-btn:hover {
+  background-color: aliceblue;
+  color: #0077b6;
+  border-color: #0077b6;
+}
+
+.manual-btn {
+  background-color: #0077b6;
+  transition: background-color 0.3s ease;
+}
+
+.manual-btn:hover {
+  background-color: aliceblue;
+  color: #0077b6;
+  border-color: #0077b6;
+}
+
+.food-popup-content input {
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: aliceblue;
+  color: #111;
+  border: 1px solid #0077b6;
+  border-radius: 8px;
+}
+
+.food-list {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.food-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.food-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.calories-text {
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 0.25rem;
+}
+
+.add-item-btn {
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-item-btn:hover {
+  background-color: #4cae4c;
+}
+
+.food-detail-modal {
+  position: fixed;
+  background: aliceblue;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+.food-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.food-confirm-btn {
+  background-color: #0077b6;
+  transition: background-color 0.3s ease;
+}
+
+.food-confirm-btn:hover {
+  background-color: aliceblue;
+  color: #0077b6;
+  border-color: #0077b6;
+}
+
+.food-cancel-btn {
+  background-color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.food-cancel-btn:hover {
+  background-color: aliceblue;
+  color: red;
+  border-color: red;
+}
+
+.food-detail-modal h3 {
+  color: #000;
+}
+
+.manual-entry-form {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.manual-entry-form input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.manual-entry-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 20px;
+}
+
+.manual-entry-btn {
+  background-color: #0077b6;
+  transition: background-color 0.3s ease;
+}
+
+.manual-entry-btn:hover {
+  background-color: aliceblue;
+  color: #0077b6;
+  border: 1px solid #0077b6;
+}
+
+/* MEDIUM SCREENS (tablets, < 1024px) */
+@media (max-width: 1024px) {
+  .food-popup-content {
+    width: 70%;
+  }
+}
+
+/* SMALL SCREENS (phones, < 768px) */
+@media (max-width: 768px) {
+  .food-popup-content {
+    width: 70%;
+  }
+}

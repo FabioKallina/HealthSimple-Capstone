@@ -1,0 +1,124 @@
+.habits-container {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: 80%;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.legend-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.habits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.habit-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.habit-btn {
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #0077b6;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  transition: background-color 0.3s ease;
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.not-completed {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.partial {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.completed {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background-color: #e63947b8;
+  color: #f5f5f5;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 16px;
+  line-height: 1;
+  padding: 0;
+  cursor: pointer;
+}
+
+.add-habit-form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.add-habit-form input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 200px;
+  background-color: aliceblue;
+  color: black;
+  border: 1px solid #0077b6;
+  border-radius: 10px;
+}
+
+.add-habit-btn {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #0077b6;
+    transition: background-color 0.3s ease;
+}
+
+.add-habit-btn:hover {
+    background-color: aliceblue;
+    color: #0077b6;
+    border-color: #0077b6;
+}
+
+.edit-habits-btn {
+  background-color: #444;
+}
+
+/* MEDIUM SCREENS (tablets, < 1024px) */
+@media (max-width: 1024px) {
+  .habits-container {
+    width: 90%;
+  }
+}
+
+/* SMALL SCREENS (phones, < 768px) */
+@media (max-width: 768px) {
+  .habits-container {
+    width: 90%;
+  }
+}
