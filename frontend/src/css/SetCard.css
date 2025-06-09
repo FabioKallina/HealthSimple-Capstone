@@ -1,139 +1,172 @@
-
 .set-overlay {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .setRow {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
 }
 
 .setRow.completed {
-    background-color: rgba(1, 101, 1, 0.628);
+  background-color: rgba(1, 101, 1, 0.628);
 }
 
 .setRow.completed input {
-    background-color: rgba(1, 101, 1, 0.628);
-    border: 1px solid rgba(0, 128, 0, 0.628);
-    color: #999;
+  background-color: rgba(1, 101, 1, 0.628);
+  border: 1px solid rgba(0, 128, 0, 0.628);
+  color: #999;
 }
 
 .setRow.setRow.completed .set-number {
-    background-color: rgba(1, 101, 1, 0.628);
-    color: rgb(179, 179, 179);
+  background-color: rgba(1, 101, 1, 0.628);
+  color: rgb(179, 179, 179);
 }
 
 .setRow.completed button {
-    background-color: rgba(1, 101, 1, 0.628);
-    color: white;
+  background-color: rgba(1, 101, 1, 0.628);
+  color: white;
 }
 
 .setRow.completed .set-number-display h3 {
-    color: darkgreen;
+  color: darkgreen;
 }
 
 .setRow.completed .button-container .done {
-    background-color: rgba(0, 78, 0, 0.628);
+  background-color: rgba(0, 78, 0, 0.628);
 }
 
 .input-pair {
-    display: flex;
-    align-items: flex-end;
-    gap: 2rem;
+  display: flex;
+  align-items: flex-end;
+  gap: 2rem;
 }
 
 .set-number {
-    width: 40px;
-    height: 40px;
-    border-radius: 40px;
-    background-color: #0077b6;
-    margin-bottom: -3px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #0077b6;
+  margin-bottom: -3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .input-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .input-group label {
-    margin-bottom: 0.7rem;
-    font-weight: bold;
-    font-size: 1.2rem;
-    text-align: center;
-    color: #0077b6;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #0077b6;
 }
 
 .input-group input {
-    font-size: 1.5rem;
-    border-radius: 8px;
-    background-color: #fff;
-    width: 150px;
-    text-align: center;
-    color: black;
-    border: 1.5px solid #0077b6;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  background-color: #fff;
+  width: 150px;
+  text-align: center;
+  color: black;
+  border: 1.5px solid #0077b6;
 }
 
 .input-group p {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .btn-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1rem;
 }
 
 .done {
-    background-color: aliceblue;
-    border-color: #0077b6;
-    color: #449a73;
-    transition: background-color 0.3s ease;
+  background-color: aliceblue;
+  border-color: #0077b6;
+  color: #449a73;
+  transition: background-color 0.3s ease;
 }
 
 .done:hover {
-    background-color: #449a73;
-    color: aliceblue;
+  background-color: #449a73;
+  color: aliceblue;
 }
 
 .cancel {
-    background-color: aliceblue;
-    border-color: #0077b6;
-    color: #b44545;
-    transition: background-color 0.3s ease;
+  background-color: aliceblue;
+  border-color: #0077b6;
+  color: #b44545;
+  transition: background-color 0.3s ease;
 }
 
 .cancel:hover {
-    background-color: #b44545;
-    color: aliceblue;
+  background-color: #b44545;
+  color: aliceblue;
 }
 
 .exercise-btns-container {
-    display: flex;
-    flex-direction: column;
-    margin-top: 40px;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  gap: 1rem;
 }
 
 .add-set-btn {
-    color: #449a73;
-    font-size: 1.2rem;
-    width: 300px;
-    background-color: aliceblue;
-    border-color: #449a73;
+  color: #449a73;
+  font-size: 1.2rem;
+  width: 300px;
+  background-color: aliceblue;
+  border-color: #449a73;
 }
 
 .remove-btn {
-    color: red;
-    font-size: 1.2rem;
-    background-color: aliceblue;
-    border-color: red;
+  color: red;
+  font-size: 1.2rem;
+  background-color: aliceblue;
+  border-color: red;
+}
+
+@media (max-width: 480px) {
+
+    .setRow {
+        width: 100vw;
+    }
+    .input-pair {
+        gap: 1rem;
+    }
+
+    .set-number {
+        height: 30px;
+        width: 30px;
+        font-size: 14px;
+        margin-bottom: 2px;
+    }
+
+    .input-group input {
+        width: 85px;
+    }
+
+    .btn-container {
+        gap: 0.5rem;
+    }
+
+    .btn-container button {
+        padding: 0.5rem 1rem;
+    }
+
+    .exercise-btns-container {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
 }

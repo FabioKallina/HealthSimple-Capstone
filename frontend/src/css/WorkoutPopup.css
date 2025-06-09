@@ -276,4 +276,37 @@
   }
 }
 
+@media (max-width: 480px) {
+    .timer-btn {
+      top: 45px;
+      left: 30px;
+      font-size: 0.8rem;
+    }
+
+    .finish-btn {
+      top: 44px;
+      right: 25px;
+      font-size: 0.8rem;
+    }
+
+    .list-img {
+      margin-right: 30px;
+    }
+
+    .search-result-item span {
+      font-size: 1.3rem;
+    }
+
+    .add-btn {
+      font-size: 1.3rem;
+    }
+
+    .create-ex-btn {
+      margin-top: 20px;
+    }
+
+    .summary-close {
+      position: inherit;
+    }
+}
 

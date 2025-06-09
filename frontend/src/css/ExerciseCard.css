@@ -74,3 +74,29 @@
         height: 400px;
     }
 }
+
+@media (max-width: 480px) {
+  .exercise-card {
+    width: 70%;
+  }
+
+  .exercise-img {
+    width: 300px;
+    height: 200px;
+  }
+
+  .instructions-btn {
+    width: 20px;
+    height: 30px;
+    font-size: 0.8rem;
+    top: 10px;
+  }
+
+  .instructions {
+    padding: 0;
+  }
+
+  .exercise-card p {
+    font-size: 16px;
+  }
+}

@@ -200,3 +200,27 @@
     width: 500px;
   }
 }
+
+@media (max-width: 480px) {
+  .start-btn {
+    font-size: 1.1rem;
+  }
+
+  .category-btn {
+    padding: 15px 30px;
+    border-radius: 10px;
+  }
+
+  .saved-workout {
+    width: 300px;
+  }
+
+  .saved-exercise h2 {
+    margin-bottom: 0;
+  }
+
+  .saved-exercise ul {
+    line-height: 1.3;
+    margin: 5px;
+  }
+}
