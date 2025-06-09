@@ -31,5 +31,11 @@
 }
 
 @media (max-width: 480px) {
-  
+  .weight-card {
+    padding: 0;
+  }
+
+  .weight-card h3 {
+    margin-left: 20px;
+  }
 }

@@ -116,7 +116,6 @@ const weightGraph = () => {
                 value: "Weight (lbs)",
                 angle: -90,
                 position: "insideLeft",
-                offset: -5,
                 style: { textAnchor: "middle", fill: "#000" },
               }}
             />

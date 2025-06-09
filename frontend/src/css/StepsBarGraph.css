@@ -30,3 +30,13 @@
   font-size: 0.8rem;
   cursor: pointer;
 }
+
+@media (max-width: 480px) {
+  .steps-graph-container {
+    padding: 0;
+  }
+
+  .steps-graph-container h3 {
+    margin-left: 20px;
+  } 
+}
