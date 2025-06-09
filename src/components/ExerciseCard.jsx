@@ -6,7 +6,7 @@ const ExerciseCard = ({ exercise }) => {
   const [showInstructions, setShowInstructions] = useState(false);
 
   return (
-    <div className="exercise-card">
+    <div className="exercise-card" >
             <div>
                 <img src={exercise.image} className="exercise-img"/>
             </div>

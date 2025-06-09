@@ -17,20 +17,19 @@
 }
 
 .setRow.completed input {
-    background-color: rgba(0, 81, 0, 0.588);
+    background-color: rgba(1, 101, 1, 0.628);
     border: 1px solid rgba(0, 128, 0, 0.628);
     color: #999;
 }
 
 .setRow.setRow.completed .set-number {
-    background-color: rgba(0, 78, 0, 0.628);
+    background-color: rgba(1, 101, 1, 0.628);
     color: rgb(179, 179, 179);
 }
 
 .setRow.completed button {
-    background-color: rgba(0, 78, 0, 0.628);
+    background-color: rgba(1, 101, 1, 0.628);
     color: white;
-    border: 1px solid darkgreen;
 }
 
 .setRow.completed .set-number-display h3 {
@@ -52,7 +51,7 @@
     height: 40px;
     border-radius: 40px;
     background-color: #0077b6;
-    margin-bottom: -7px;
+    margin-bottom: -3px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -79,7 +78,7 @@
     width: 150px;
     text-align: center;
     color: black;
-    border-color: #0077b6;
+    border: 1.5px solid #0077b6;
 }
 
 .input-group p {
@@ -91,6 +90,30 @@
     justify-content: center;
     align-items: flex-end;
     gap: 1rem;
+}
+
+.done {
+    background-color: aliceblue;
+    border-color: #0077b6;
+    color: #449a73;
+    transition: background-color 0.3s ease;
+}
+
+.done:hover {
+    background-color: #449a73;
+    color: aliceblue;
+}
+
+.cancel {
+    background-color: aliceblue;
+    border-color: #0077b6;
+    color: #b44545;
+    transition: background-color 0.3s ease;
+}
+
+.cancel:hover {
+    background-color: #b44545;
+    color: aliceblue;
 }
 
 .exercise-btns-container {

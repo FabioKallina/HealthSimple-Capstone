@@ -41,7 +41,7 @@ const SetCard = ({ exercise, onUpdateSets, onRemove }) => {
         <h2>{exercise.name}</h2>
 
         {sets.map((set, index) => (
-            <div className={`setRow ${set.completed ? "completed" : "" }`}>
+            <div className={`setRow ${set.completed ? "completed" : "" }`} key={index}>
                 <div className="input-pair">
                     <div className="set-number">
                         <h3>{index + 1}</h3>

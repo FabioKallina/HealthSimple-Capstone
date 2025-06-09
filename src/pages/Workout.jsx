@@ -113,10 +113,11 @@ const Workout = () => {
       )}
 
       <div className="category-list">
-        {defaultCategories.map((category) => (
+        {defaultCategories.map((category, index) => (
           <button
             className="category-btn"
             onClick={() => handleCategoryClick(category)}
+            key={index}
           >
             {category.toUpperCase()}
           </button>
@@ -125,7 +126,7 @@ const Workout = () => {
 
       <div className="exercise-grid">
         {exercises.length > 0 ? (
-          exercises.map((exercise) => (
+          exercises.map((exercise, index) => (
             <ExerciseCard key={exercise.id} exercise={exercise} />
           ))
         ) : (
