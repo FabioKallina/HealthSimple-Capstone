@@ -29,3 +29,7 @@
   font-size: 0.8rem;
   cursor: pointer;
 }
+
+@media (max-width: 480px) {
+  
+}
