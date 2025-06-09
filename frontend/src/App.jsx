@@ -12,24 +12,88 @@ import Register from "./pages/Register";
 import ForgotPassword from "./components/forgotPassword";
 import ResetPassword from "./components/ResetPassword";
 import FriendProfile from "./pages/FriendProfile";
+import ProtectedRoute from "./components/ProtectedRoutes";
 
 function App() {
   return (
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/workout" element={<Workout />} />
-        <Route path="/nutrition" element={<Nutrition />} />
-        <Route path="/checkIn" element={<CheckIn />} />
-        <Route path="/community" element={<Community />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/habits" element={<Habits />} />
+        {/* Public routes */}
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/reset-password/:token" element={<ResetPassword />} />
-        <Route path="/friends/:friendId" element={<FriendProfile />} />
+
+        {/* Protected routes */}
+        <Route
+          path="/"
+          element={
+            localStorage.getItem("token") ? (
+              <ProtectedRoute>
+                <Home />
+              </ProtectedRoute>
+            ) : (
+              <Navigate to="/login" replace />
+            )
+          }
+        />
+        <Route
+          path="/workout"
+          element={
+            <ProtectedRoute>
+              <Workout />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/nutrition"
+          element={
+            <ProtectedRoute>
+              <Nutrition />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/checkIn"
+          element={
+            <ProtectedRoute>
+              <CheckIn />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/community"
+          element={
+            <ProtectedRoute>
+              <Community />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/profile"
+          element={
+            <ProtectedRoute>
+              <Profile />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/habits"
+          element={
+            <ProtectedRoute>
+              <Habits />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/friends/:friendId"
+          element={
+            <ProtectedRoute>
+              <FriendProfile />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
     </>
   );
