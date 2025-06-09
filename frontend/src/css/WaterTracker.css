@@ -50,6 +50,8 @@
 .add-water-btn {
   background-color: #2196f3;
   font-size: 1.1rem;
+  color: white !important;
+  -webkit-text-fill-color: white !important; /* Safari iOS fix */
 }
 
 .water-form input {

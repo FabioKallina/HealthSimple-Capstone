@@ -30,6 +30,8 @@
 .food-close-btn {
   background-color: #0077b6;
   transition: background-color 0.3s ease;
+  color: white !important;
+  -webkit-text-fill-color: white !important; /* Safari iOS fix */
 }
 
 .food-close-btn:hover {
@@ -41,6 +43,8 @@
 .food-search-btn {
   background-color: #0077b6;
   transition: background-color 0.3s ease;
+  color: white !important;
+  -webkit-text-fill-color: white !important; /* Safari iOS fix */
 }
 
 .food-search-btn:hover {
@@ -52,6 +56,8 @@
 .manual-btn {
   background-color: #0077b6;
   transition: background-color 0.3s ease;
+  color: white !important;
+  -webkit-text-fill-color: white !important; /* Safari iOS fix */
 }
 
 .manual-btn:hover {

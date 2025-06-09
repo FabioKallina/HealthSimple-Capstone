@@ -48,18 +48,6 @@ button:hover {
   border-color: #ececf6;
 }
 
-/* FIX FOR SAFARI ON iOS */
-button, input[type="submit"], a {
-  color: white !important;
-  -webkit-appearance: none;
-  -webkit-text-fill-color: white !important;
-  text-decoration: none;
-}
-
-* {
-  -webkit-tap-highlight-color: transparent;
-}
-
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
