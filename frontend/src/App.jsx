@@ -30,9 +30,7 @@ function App() {
           path="/"
           element={
             localStorage.getItem("token") ? (
-              <ProtectedRoute>
-                <Home />
-              </ProtectedRoute>
+              <Home />
             ) : (
               <Navigate to="/login" replace />
             )
