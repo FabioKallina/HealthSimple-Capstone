@@ -206,6 +206,12 @@
     font-size: 1.1rem;
   }
 
+  .category-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    margin-bottom: 10px;
+  }
+
   .category-btn {
     padding: 15px 30px;
     border-radius: 10px;
