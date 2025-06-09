@@ -10,7 +10,7 @@ import nutritionAPI from "../services/nutritionAPI";
 import WaterTracker from "../components/home/WaterTracker";
 import HabitsStreak from "../components/home/HabitsStreak";
 import StepsBarGraph from "../components/home/StepsBarGraph";
-import WeightGraph from "../components/home/weightGraph";
+import WeightGraph from "../components/home/WeightGraph";
 
 const getLocalDateString = () => {
   const today = new Date();
