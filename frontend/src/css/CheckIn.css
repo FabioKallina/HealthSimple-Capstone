@@ -137,3 +137,37 @@
     width: 90%;
   }
 }
+
+@media (max-width: 480px) {
+  .check-in-container {
+    width: 95%;
+  }
+
+  .mood-container {
+    padding: 0.5rem;
+    gap: 1rem;
+  }
+
+  .mood-btn {
+    width: 100px;
+    height: 100px;
+    font-size: 1.8rem;
+  }
+
+  .label-text {
+    font-size: 1rem;
+  }
+
+  .journal-container {
+    padding: 0.5rem;
+  }
+
+  .journal-display {
+    font-size: 0.8rem;
+    min-height: 500px;
+  }
+
+  .check-in-btn {
+    padding: 15px;
+  }
+}

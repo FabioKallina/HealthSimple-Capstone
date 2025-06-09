@@ -199,3 +199,14 @@
     width: 70%;
   }
 }
+
+@media (max-width: 480px) {
+  .food-detail-modal {
+    width: 70%;
+    left: 47%;
+  }
+
+  .food-submit {
+    flex-direction: column;
+  }
+}

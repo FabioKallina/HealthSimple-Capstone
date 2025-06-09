@@ -279,3 +279,24 @@ p {
     width: 90%;
   }
 }
+
+@media (max-width: 480px) {
+  .community-container {
+    width: 95%;
+    padding: 0;
+  }
+
+  .community-container h2 {
+    padding-top: 1rem;
+  }
+
+  .challenge-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .join-btn {
+    margin: 0;
+  }
+}

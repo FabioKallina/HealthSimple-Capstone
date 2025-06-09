@@ -268,3 +268,10 @@ li {
     right: 27%;
   }
 }
+
+@media (max-width: 480px) {
+  .avatar-options {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

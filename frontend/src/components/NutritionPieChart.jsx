@@ -2,6 +2,8 @@ import React from "react";
 import { Pie } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 
+import "../css/NutritionPieChart.css";
+
 ChartJS.register(ArcElement, Legend, Tooltip);
 
 const NutritionPieChart = ({ foods }) => {
@@ -35,15 +37,7 @@ const NutritionPieChart = ({ foods }) => {
 
   return (
     <div
-      style={{
-        width: "400px",
-        margin: "0 auto",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column",
-        marginBottom: 20,
-      }}
+      className="pie-chart-display"
     >
       <h3 style={{ color: "#000" }}>Macronutrients Breakdown</h3>
       <Pie data={data} />

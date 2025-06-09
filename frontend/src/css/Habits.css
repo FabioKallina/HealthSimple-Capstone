@@ -122,3 +122,34 @@
     width: 90%;
   }
 }
+
+@media (max-width: 480px) {
+  .habits-container {
+    width: 95%;
+    padding: 0;
+  }
+
+  .habits-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+
+  .legend-display {
+    flex-wrap: wrap;
+    gap: 0.7rem;
+  }
+
+  .legend-display p {
+    font-size: 0.8rem;
+    margin: 0;
+  }
+  
+  .habit-btn {
+    width: 100px;
+    height: 100px;
+  }
+
+  .add-habit-form {
+    margin: 16px 10px;
+    padding-bottom: 10px;
+  }
+}

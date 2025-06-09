@@ -88,10 +88,9 @@
 
 /* SMALL SCREENS (phones, < 768px) */
 @media (max-width: 768px) {
-
-    .nutrition-card {
-        width: 90%;
-    }
+  .nutrition-card {
+    width: 90%;
+  }
 
   .food-logged {
     gap: 2rem;
@@ -100,5 +99,24 @@
   .food-logged h3 {
     font-size: 1rem;
   }
+}
 
+@media (max-width: 480px) {
+  .nutrition-card {
+    width: 80%;
+  }
+
+  .food-logged {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .food-logged p {
+    margin: 5px;
+  }
+
+  .remove-food-btn {
+    border: 1px solid red;
+    font-size: 0.8rem;
+  }
 }
