@@ -3,8 +3,14 @@ import "../../css/WaterTracker.css";
 
 import API from "../../services/waterAPI";
 
-//Helper to get today's date
-const getToday = () => new Date().toISOString().split("T")[0];
+//Helper to get today's date in local time
+const getToday = () => {
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = String(today.getMonth() + 1).padStart(2, "0");
+  const day = String(today.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+};
 
 const WaterTracker = () => {
   const goal = 3000; // ml

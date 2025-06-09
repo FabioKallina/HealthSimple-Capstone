@@ -18,7 +18,6 @@ const weightGraph = () => {
   const [todaysWeight, setTodaysWeight] = useState("");
   const [loading, setLoading] = useState(true);
 
-  const [timeRange, setTimeRange] = useState("1w");
 
   const fetchWeight = async () => {
     const token = localStorage.getItem("token");
