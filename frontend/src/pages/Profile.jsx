@@ -36,7 +36,7 @@ const Profile = () => {
     const fetchWorkouts = async () => {
       try {
         const token = localStorage.getItem("token");
-        const res = await API.get("/api/profile", {
+        const res = await API.get("/api/workout", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -215,7 +215,6 @@ const Profile = () => {
       <div className="profile-stats">
         <h3>Stats</h3>
         <p>🏋️ {userWorkouts.length} Workouts</p>
-        <p>✅ 5 Challenges</p>
         <p>👥 {friends.length} Friends</p>
       </div>
 
