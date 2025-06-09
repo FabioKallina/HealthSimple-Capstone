@@ -167,6 +167,8 @@ li {
   background-color: #0077b6;
   cursor: pointer;
   transition: border-color 0.3s;
+  color: white !important;
+  -webkit-text-fill-color: white !important; /* Safari iOS fix */
 }
 
 .profile-stats h3,

@@ -82,6 +82,8 @@
     margin-top: 30px;
     background-color: #0077b6;
     transition: background-color 0.3s ease;
+    color: white !important;
+  -webkit-text-fill-color: white !important; /* Safari iOS fix */
 }
 
 .check-in-btn:hover {

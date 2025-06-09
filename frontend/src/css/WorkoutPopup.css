@@ -36,6 +36,8 @@
   position: absolute;
   right: 420px;
   top: 65px;
+  color: white !important;
+  -webkit-text-fill-color: white !important; /* Safari iOS fix */
 }
 
 .timer-btn {
@@ -97,6 +99,8 @@
   background-color: #00a63da7;
   margin-top: 20px;
   transition: background-color 0.3s ease;
+  color: white !important;
+  -webkit-text-fill-color: white !important; /* Safari iOS fix */
 }
 
 .add-exercise-btn:hover {
@@ -108,6 +112,8 @@
 .close-btn {
   background-color: rgba(255, 0, 0, 0.354);
   transition: background-color 0.3s ease;
+  color: white !important;
+  -webkit-text-fill-color: white !important; /* Safari iOS fix */
 }
 
 .close-btn:hover {
@@ -223,6 +229,8 @@
 .create-ex-btn {
     margin-top: 0.5rem;
     background-color: #0077b6;
+    color: white !important;
+  -webkit-text-fill-color: white !important; /* Safari iOS fix */
 }
 
 /* MEDIUM SCREENS (tablets, < 1024px) */

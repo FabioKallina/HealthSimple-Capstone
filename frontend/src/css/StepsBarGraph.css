@@ -29,6 +29,8 @@
   width: 60px;
   font-size: 0.8rem;
   cursor: pointer;
+  color: white !important;
+  -webkit-text-fill-color: white !important; /* Safari iOS fix */
 }
 
 @media (max-width: 480px) {
