@@ -15,7 +15,7 @@ const HabitsHeatmap = () => {
     const fetchHabits = async () => {
       const token = localStorage.getItem("token");
       try {
-        const res = await API.get("/", {
+        const res = await API.get("/api/habits", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setHabits(res.data.data);

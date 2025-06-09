@@ -7,6 +7,8 @@ import SetCard from "./SetCard";
 
 import { exercises as exerciseData, exercises } from "../constants/exercises";
 
+const BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
+
 import axios from "axios";
 
 const WorkoutPopup = ({ onCancel, onWorkoutFinish }) => {
@@ -99,7 +101,7 @@ const WorkoutPopup = ({ onCancel, onWorkoutFinish }) => {
     try {
       const token = localStorage.getItem("token");
       const res = await axios.post(
-        "http://localhost:3000/api/workout",
+        `${BASE_URL}/api/workout`,
         workoutData,
         {
           headers: {
@@ -129,7 +131,7 @@ const WorkoutPopup = ({ onCancel, onWorkoutFinish }) => {
 
     try {
       const res = await axios.post(
-        "http://localhost:3000/api/exercises",
+        `${BASE_URL}/api/exercises`,
         { name: newExerciseName, category: newExerciseCategory },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -158,7 +160,7 @@ const WorkoutPopup = ({ onCancel, onWorkoutFinish }) => {
       const token = localStorage.getItem("token");
 
       try {
-        const res = await axios.get("http://localhost:3000/api/exercises", {
+        const res = await axios.get(`${BASE_URL}/api/exercises`, {
           headers: { Authorization: `Bearer ${token}` },
         });
 

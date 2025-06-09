@@ -19,7 +19,7 @@ const WorkoutStats = () => {
       const token = localStorage.getItem("token");
 
       try {
-        const res = await API.get("/", {
+        const res = await API.get("/api/workout", {
           headers: {
             Authorization: `Bearer ${token}`,
           },

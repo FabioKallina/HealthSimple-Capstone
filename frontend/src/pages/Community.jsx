@@ -27,7 +27,7 @@ const Community = () => {
     const fetchFriends = async () => {
       try {
         const token = localStorage.getItem("token");
-        const res = await API.get("/", {
+        const res = await API.get("/api/friends", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -44,7 +44,7 @@ const Community = () => {
   const fetchChallenges = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await challengesAPI.get("/", {
+      const res = await challengesAPI.get("/api/challenges", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -66,7 +66,7 @@ const Community = () => {
       console.log("Joining challenge with:", { challengeId: challenge._id });
       const token = localStorage.getItem("token");
       await challengesAPI.post(
-        "/join",
+        "/api/challenges/join",
         { challengeId: challenge._id },
         {
           headers: {
@@ -85,7 +85,7 @@ const Community = () => {
     try {
       const token = localStorage.getItem("token");
       await challengesAPI.patch(
-        `/${challengeId}/done`,
+        `api/challenges/${challengeId}/done`,
         {},
         {
           headers: {
@@ -119,7 +119,7 @@ const Community = () => {
       const token = localStorage.getItem("token");
 
       // Search registered users by name (change API baseURL accordingly)
-      const res = await API.get(`/search?q=${friendName}`, {
+      const res = await API.get(`api/friends/search?q=${friendName}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 

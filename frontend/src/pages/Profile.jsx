@@ -16,6 +16,8 @@ import avatar7 from "../images/profile-images/snow-leopard.jpg";
 
 const avatars = [avatar1, avatar2, avatar3, avatar4, avatar5, avatar6, avatar7];
 
+const BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
+
 const Profile = () => {
   const [bio, setBio] = useState("I love lifting and taking care of my body");
   const [name, setName] = useState("");
@@ -34,7 +36,7 @@ const Profile = () => {
     const fetchWorkouts = async () => {
       try {
         const token = localStorage.getItem("token");
-        const res = await API.get("/", {
+        const res = await API.get("/api/profile", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -53,7 +55,7 @@ const Profile = () => {
       try {
         const token = localStorage.getItem("token");
 
-        const res = await friendAPI.get("/", {
+        const res = await friendAPI.get("/api/friends", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -71,7 +73,7 @@ const Profile = () => {
     const fetchProfile = async () => {
       try {
         const token = localStorage.getItem("token");
-        const res = await profileAPI.get("/", {
+        const res = await profileAPI.get("/api/profile", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -97,7 +99,7 @@ const Profile = () => {
         avatarIndex,
         goals: goals.map((g) => ({ goal: g })),
       };
-      const res = await profileAPI.put("/", updatedData, {
+      const res = await profileAPI.put("/api/profile", updatedData, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -141,7 +143,7 @@ const Profile = () => {
   const handleDeleteAccount = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await profileAPI.delete("/delete", {
+      const res = await profileAPI.delete("/api/profile/delete", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

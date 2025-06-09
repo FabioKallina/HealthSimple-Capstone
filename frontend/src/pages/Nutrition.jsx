@@ -7,6 +7,9 @@ import NutritionPieChart from "../components/NutritionPieChart";
 import "../css/Nutrition.css";
 import nutritionAPI from "../services/nutritionAPI";
 
+
+const BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
+
 const getLocalDateString = () => {
   const today = new Date();
   const offset = today.getTimezoneOffset(); // in minutes
@@ -33,7 +36,7 @@ const Nutrition = () => {
       try {
         const token = localStorage.getItem("token");
 
-        const res = await nutritionAPI.get(`/?date=${selectedDate}`, {
+        const res = await nutritionAPI.get(`/api/nutrition/?date=${selectedDate}`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -82,7 +85,7 @@ const Nutrition = () => {
 
     try {
       const token = localStorage.getItem("token");
-      const res = await nutritionAPI.post("/", foodToSend, {
+      const res = await nutritionAPI.post("/api/nutrition", foodToSend, {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -111,7 +114,7 @@ const Nutrition = () => {
     try {
       const token = localStorage.getItem("token");
 
-      await nutritionAPI.delete(`/${foodToDelete._id}`, {
+      await nutritionAPI.delete(`/api/nutrition/${foodToDelete._id}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }

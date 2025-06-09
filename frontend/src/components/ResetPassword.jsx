@@ -6,6 +6,8 @@ import axios from "axios";
 
 import "../css/ResetPassword.css";
 
+const BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
+
 const ResetPassword = () => {
   const { token } = useParams();
   const navigate = useNavigate();
@@ -15,7 +17,7 @@ const ResetPassword = () => {
   const handleReset = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`http://localhost:3000/api/auth/reset-password/${token}`, { password });
+      await axios.post(`${BASE_URL}/api/auth/reset-password/${token}`, { password });
       setMessage("Password reset successful. Redirecting to login...");
       setTimeout(() => navigate("/login"), 3000);
     } catch (err) {

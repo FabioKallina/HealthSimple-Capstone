@@ -3,6 +3,8 @@ import "../../css/WaterTracker.css";
 
 import API from "../../services/waterAPI";
 
+const BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
+
 //Helper to get today's date in local time
 const getToday = () => {
   const today = new Date();
@@ -25,7 +27,7 @@ const WaterTracker = () => {
       const token = localStorage.getItem("token");
 
       try {
-        const res = await API.get("/", {
+        const res = await API.get("/api/water", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -57,7 +59,7 @@ const WaterTracker = () => {
 
     try {
       await API.post(
-        "/",
+        "/api/water",
         { date: today, water: amount },
         { headers: { Authorization: `Bearer ${token} ` } }
       );

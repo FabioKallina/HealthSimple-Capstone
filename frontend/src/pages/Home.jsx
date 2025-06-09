@@ -6,6 +6,7 @@ import NutritionPieChart from "../components/NutritionPieChart";
 import WorkoutStats from "../components/home/WorkoutStats";
 
 import nutritionAPI from "../services/nutritionAPI";
+
 import WaterTracker from "../components/home/WaterTracker";
 import HabitsStreak from "../components/home/HabitsStreak";
 import StepsBarGraph from "../components/home/StepsBarGraph";
@@ -34,7 +35,7 @@ const Home = () => {
       try {
         const token = localStorage.getItem("token");
 
-        const res = await nutritionAPI.get(`/?date=${selectedDate}`, {
+        const res = await nutritionAPI.get(`/api/nutrition/?date=${selectedDate}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

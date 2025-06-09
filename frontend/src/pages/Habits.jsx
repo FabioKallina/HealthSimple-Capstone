@@ -7,6 +7,9 @@ import DateNavigator from "../components/DateNavigator";
 import API from "../services/habitsAPI.js";
 import axios from "axios";
 
+
+const BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
+
 const initialHabits = [
   { id: 1, name: "Wake up 8:00AM", status: 0 },
   { id: 2, name: "Workout", status: 0 },
@@ -47,7 +50,7 @@ const Habits = () => {
       const token = localStorage.getItem("token");
 
       const res = await axios.get(
-        `http://localhost:3000/api/habits?date=${selectedDate}`,
+        `${BASE_URL}/api/habits?date=${selectedDate}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -89,7 +92,7 @@ const Habits = () => {
       const token = localStorage.getItem("token");
 
       await axios.put(
-        `http://localhost:3000/api/habits/${id}/log`,
+        `${BASE_URL}/api/habits/${id}/log`,
         { date: selectedDate, status: newStatus },
         {
           headers: {
@@ -132,7 +135,7 @@ const Habits = () => {
       const token = localStorage.getItem("token");
 
       const res = await axios.post(
-        "http://localhost:3000/api/habits",
+        `${BASE_URL}/api/habits`,
         { name: newHabit },
         {
           headers: {
@@ -155,7 +158,7 @@ const Habits = () => {
       const token = localStorage.getItem("token");
 
       const res = await axios.delete(
-        `http://localhost:3000/api/habits/${idToDelete}`,
+        `${BASE_URL}/api/habits/${idToDelete}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

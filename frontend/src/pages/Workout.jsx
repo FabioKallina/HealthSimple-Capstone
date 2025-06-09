@@ -21,7 +21,7 @@ const Workout = () => {
     try {
       const token = localStorage.getItem("token");
 
-      const res = await API.get("/", {
+      const res = await API.get("/api/workout", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

@@ -9,7 +9,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-import API from "../../services/weightAPi.js";
+import API from "../../services/weightAPI.js";
 
 import "../../css/weightGraph.css";
 
@@ -22,7 +22,7 @@ const weightGraph = () => {
   const fetchWeight = async () => {
     const token = localStorage.getItem("token");
     try {
-      const res = await API.get("/", {
+      const res = await API.get("/api/weight", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -56,7 +56,7 @@ const weightGraph = () => {
 
     try {
       await API.post(
-        "/",
+        "/api/weight",
         { date: today, weight: parseFloat(todaysWeight) },
         {
           headers: {

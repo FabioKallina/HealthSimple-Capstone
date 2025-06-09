@@ -21,7 +21,7 @@ const FriendProfile = () => {
       const token = localStorage.getItem("token");
 
       try {
-        const res = await API.get(`/${friendId}`, {
+        const res = await API.get(`/api/friends/${friendId}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

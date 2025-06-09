@@ -46,7 +46,7 @@ const CheckIn = () => {
       try {
         const token = localStorage.getItem("token");
 
-        const res = await API.get(`/?date=${selectedDate}`, {
+        const res = await API.get(`/api/checkin/?date=${selectedDate}`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -90,7 +90,7 @@ const CheckIn = () => {
     try {
       const token = localStorage.getItem("token");
 
-      await API.post("/", checkInData, {
+      await API.post("/api/checkin", checkInData, {
         headers: {
           Authorization: `Bearer ${token}`
         }

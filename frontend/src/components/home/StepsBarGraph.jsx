@@ -14,6 +14,8 @@ import API from "../../services/stepsAPI.js";
 
 import "../../css/StepsBarGraph.css";
 
+const BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
+
 const StepsBarGraph = () => {
 
   const [stepsData, setStepsData] = useState([]);
@@ -23,7 +25,7 @@ const StepsBarGraph = () => {
   const fetchSteps = async () => {
     const token = localStorage.getItem("token");
     try {
-      const res = await API.get("/", {
+      const res = await API.get("/api/steps", {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -50,7 +52,7 @@ const StepsBarGraph = () => {
     const today = new Date().toISOString().split("T")[0];
 
     try {
-      await API.post("/", 
+      await API.post("/api/steps", 
         { date: today, steps: parseInt(todaySteps, 10) }, {
         headers: {
           Authorization: `Bearer ${token}`

@@ -1,8 +1,11 @@
 
+const BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000/api/weight";
+
+
 import axios from "axios";
 
 const API = axios.create({
-    baseURL: "http://localhost:3000/api/weight"
+    baseURL: BASE_URL,
 });
 
 export default API;
