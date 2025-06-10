@@ -49,8 +49,12 @@ app.use("/api/exercises", exerciseRoutes);
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-app.get("/", (req, res) => {
-  res.send("Backend is running!");
+// Serve React static files
+app.use(express.static(path.join(__dirname, "../client/dist")));
+
+// Catch-all to serve React app for client-side routing
+app.get(/^\/(?!api).*/, (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/dist", "index.html"));
 });
 
 app.listen(PORT, () => {
