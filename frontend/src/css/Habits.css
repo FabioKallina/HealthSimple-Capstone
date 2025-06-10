@@ -96,17 +96,21 @@
   font-size: 1rem;
   cursor: pointer;
   background-color: #0077b6;
-    transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  color: white !important;
+  -webkit-text-fill-color: white !important; /* Safari iOS fix */
 }
 
 .add-habit-btn:hover {
-    background-color: aliceblue;
-    color: #0077b6;
-    border-color: #0077b6;
+  background-color: aliceblue;
+  color: #0077b6;
+  border-color: #0077b6;
 }
 
 .edit-habits-btn {
   background-color: #444;
+  color: white !important;
+  -webkit-text-fill-color: white !important; /* Safari iOS fix */
 }
 
 /* MEDIUM SCREENS (tablets, < 1024px) */
@@ -142,7 +146,7 @@
     font-size: 0.8rem;
     margin: 0;
   }
-  
+
   .habit-btn {
     width: 100px;
     height: 100px;
