@@ -183,9 +183,9 @@ npm run dev
 
 **Fabio Kallina de Paula**
 
-- 🔗 [LinkedIn](https://www.linkedin.com/in/fabiokallinadepaula)
-- 🌐 [Portfolio](https://your-portfolio-link.com)
-- 📧 fabio.your-email@example.com
+- 🔗 [LinkedIn](https://www.linkedin.com/in/fabiokallina/)
+- 🌐 [Portfolio](https://fabiokallina.github.io/)
+- 📧 fabiokdp8@gmail.com.com
 
 Feel free to connect or reach out if you're interested in collaborating, have feedback, or want to learn more about this project!
 
@@ -195,7 +195,7 @@ Feel free to connect or reach out if you're interested in collaborating, have fe
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/healthsync.git
+git clone https://FabioKallina/healthsync-capstone.git
 cd healthsync
 
 # 2. Backend setup
