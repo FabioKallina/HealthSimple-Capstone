@@ -1,6 +1,19 @@
+
+/**
+ * Description: This file handles habits controllers
+ * Author: Fabio Kallina de Paula
+ * Created: June 5, 2025
+ */
+
 import Habit from "../models/habitsModel.js";
 
-//Get all habits for a user
+/**
+ * Get all habit data for the logged-in user
+ * @route GET /api/habits
+ * @access Private
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 export const getHabits = async (req, res) => {
   try {
     const userId = req.user.id;
@@ -19,7 +32,13 @@ export const getHabits = async (req, res) => {
   }
 };
 
-//Create a new habit
+/**
+ * Create habit data for the logged-in user
+ * @route POST /api/habits
+ * @access Private
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 export const createHabit = async (req, res) => {
   try {
     const { name } = req.body;
@@ -40,7 +59,13 @@ export const createHabit = async (req, res) => {
   }
 };
 
-//Delete a habit
+/**
+ * Delete habit data for the logged-in user
+ * @route DELETE /api/habits/:habitId
+ * @access Private
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 export const deleteHabit = async (req, res) => {
   try {
     const { habitId } = req.params;
@@ -59,7 +84,13 @@ export const deleteHabit = async (req, res) => {
   }
 };
 
-//Update habit for today's log
+/**
+ * Update habit data for the logged-in user
+ * @route POST /api/habits/:habitId/log
+ * @access Private
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 export const updateHabit = async (req, res) => {
   try {
     const { habitId } = req.params;

@@ -1,7 +1,20 @@
+
+/**
+ * Description: This file handles workout controllers
+ * Author: Fabio Kallina de Paula
+ * Created: May 26, 2025
+ */
+
 import Workout from "../models/workoutModel.js";
 import mongoose from "mongoose";
 
-//Get all workouts for the logged-in user
+/**
+ * Get all workouts for the logged-in user
+ * @route GET /api/workout
+ * @access Private
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 export const getAllWorkouts = async (req, res) => {
   try {
     const userId = req.user.id;
@@ -23,7 +36,13 @@ export const getAllWorkouts = async (req, res) => {
   }
 };
 
-//Create a workout
+/**
+ * Create a workout for the logged-in user
+ * @route POST /api/workout
+ * @access Private
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 export const createWorkout = async (req, res) => {
   try {
     const userId = req.user.id;
@@ -57,7 +76,13 @@ export const createWorkout = async (req, res) => {
   }
 };
 
-//Update a workout
+/**
+ * Update a workout for the logged-in user
+ * @route PUT /api/workout/:id
+ * @access Private
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 export const updateWorkout = async (req, res) => {
   try {
     const { id } = req.params;
@@ -87,7 +112,13 @@ export const updateWorkout = async (req, res) => {
   }
 };
 
-//Delete a workout
+/**
+ * Delete workouts for the logged-in user
+ * @route DELETE /api/workout/:id
+ * @access Private
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 export const deleteWorkout = async (req, res) => {
   const { id } = req.params;
 

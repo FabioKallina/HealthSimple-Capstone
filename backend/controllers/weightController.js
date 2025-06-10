@@ -1,7 +1,19 @@
 
+/**
+ * Description: This file handles weight controllers
+ * Author: Fabio Kallina de Paula
+ * Created: June 6, 2025
+ */
+
 import Weight from "../models/weightModel.js";
 
-//Get weight data
+/**
+ * Get all weight data for the logged-in user
+ * @route GET /api/weight
+ * @access Private
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 export const getWeight = async ( req, res ) => {
 
     try {
@@ -22,7 +34,13 @@ export const getWeight = async ( req, res ) => {
     }
 }
 
-//Create weight data point
+/**
+ * Create weight data point for the logged-in user
+ * @route POST /api/weight
+ * @access Private
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 export const createWeight = async ( req, res ) => {
 
     try {

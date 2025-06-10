@@ -1,6 +1,19 @@
+
+/**
+ * Description: This file handles exercise controllers
+ * Author: Fabio Kallina de Paula
+ * Created: June 5, 2025
+ */
+
 import Exercise from "../models/exerciseModel.js";
 
-//Get exercise
+/**
+ * Get all exercise for the logged-in user
+ * @route GET /api/exercises
+ * @access Private
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 export const getExercises = async (req, res) => {
   try {
     const userId = req.user.id;
@@ -19,7 +32,13 @@ export const getExercises = async (req, res) => {
   }
 };
 
-//Create exercise
+/**
+ * Create exercise for the logged-in user
+ * @route POST /api/exercises
+ * @access Private
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 export const createExercise = async (req, res) => {
   try {
     const userId = req.user.id;

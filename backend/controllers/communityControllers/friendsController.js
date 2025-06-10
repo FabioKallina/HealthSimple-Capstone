@@ -1,3 +1,10 @@
+
+/**
+ * Description: This file handles friends controllers
+ * Author: Fabio Kallina de Paula
+ * Created: June 6, 2025
+ */
+
 import mongoose from "mongoose";
 import Friends from "../../models/communityModels/friendsModel.js";
 import User from "../../models/userModel.js";
@@ -5,7 +12,13 @@ import Profile from "../../models/profileModel.js";
 import Workout from "../../models/workoutModel.js";
 import Challenge from "../../models/communityModels/challengesModel.js";
 
-//Get friends
+/**
+ * Get all friends for the logged-in user
+ * @route GET /api/friends
+ * @access Private
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 export const getAllFriends = async (req, res) => {
   try {
     const currentUserId = req.user.id;
@@ -25,7 +38,13 @@ export const getAllFriends = async (req, res) => {
   }
 };
 
-//Search for a friend
+/**
+ * Search for friends for the logged-in user
+ * @route GET /api/friends
+ * @access Private
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 export const searchFriend = async (req, res) => {
   try {
     const { search } = req.query;
@@ -49,7 +68,13 @@ export const searchFriend = async (req, res) => {
   }
 };
 
-//Add friend
+/**
+ * Add friends for the logged-in user
+ * @route POST /api/friends
+ * @access Private
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 export const addFriend = async (req, res) => {
   try {
     console.log("Request user:", req.user);
@@ -110,7 +135,13 @@ export const addFriend = async (req, res) => {
   }
 };
 
-//Search for existing users
+/**
+ * Search friends for the logged-in user
+ * @route GET /api/friends/search
+ * @access Private
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 export const searchUsers = async (req, res) => {
   try {
     const { q } = req.query;
@@ -132,7 +163,13 @@ export const searchUsers = async (req, res) => {
   }
 };
 
-//Get a friend's profile by friendId
+/**
+ * Get a friend's profile for the logged-in user
+ * @route GET /api/friends/:friendId
+ * @access Private
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 export const getFriendProfile = async (req, res) => {
   try {
     const currentUserId = req.user.id;

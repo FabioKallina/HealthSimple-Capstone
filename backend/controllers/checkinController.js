@@ -1,9 +1,22 @@
+
+/**
+ * Description: This file handles checkIn controllers
+ * Author: Fabio Kallina de Paula
+ * Created: June 5, 2025
+ */
+
+
 import CheckIn from "../models/checkinModel.js";
-import mongoose from "mongoose";
 
 const today = new Date().toISOString().split("T")[0];
 
-//GET all mood and journal
+/**
+ * Get all checkIn data for the logged-in user
+ * @route GET /api/checkin
+ * @access Private
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 export const getAllCheckIn = async (req, res) => {
   try {
     const { date } = req.query;
@@ -33,7 +46,13 @@ export const getAllCheckIn = async (req, res) => {
   }
 };
 
-//Create a CheckIn submission
+/**
+ * Create checkIn data for the logged-in user
+ * @route POST /api/checkin
+ * @access Private
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 export const createCheckIn = async (req, res) => {
   try {
     const { date, mood, journal } = req.body;

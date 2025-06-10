@@ -1,8 +1,21 @@
+
+/**
+ * Description: This file handles nutrition controllers
+ * Author: Fabio Kallina de Paula
+ * Created: June 4, 2025
+ */
+
 import Food from "../models/nutritionModel.js";
 import mongoose from "mongoose";
 
 
-//Get all the logged foods for user
+/**
+ * Get all nutrition data for the logged-in user
+ * @route GET /api/nutrition
+ * @access Private
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 export const getAllFoods = async (req, res) => {
   try {
 
@@ -36,7 +49,13 @@ export const getAllFoods = async (req, res) => {
   }
 };
 
-//Create food
+/**
+ * Create nutrition data for the logged-in user
+ * @route POST /api/nutrition
+ * @access Private
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 export const createFood = async (req, res) => {
   try {
 
@@ -96,7 +115,13 @@ export const createFood = async (req, res) => {
   }
 };
 
-//Delete a food item
+/**
+ * Delete nutrition data for the logged-in user
+ * @route DELET /api/nutrition/:id
+ * @access Private
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 export const deleteFood = async (req, res) => {
   const { id } = req.params;
 

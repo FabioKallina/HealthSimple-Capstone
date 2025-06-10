@@ -1,7 +1,19 @@
 
+/**
+ * Description: This file handles steps controllers
+ * Author: Fabio Kallina de Paula
+ * Created: June 6, 2025
+ */
+
 import Steps from "../models/stepsModel.js";
 
-//Get steps data
+/**
+ * Get all steps data for the logged-in user
+ * @route GET /api/steps
+ * @access Private
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 export const getSteps = async ( req, res ) => {
 
     try {
@@ -22,7 +34,13 @@ export const getSteps = async ( req, res ) => {
     }
 }
 
-//Create new entry for steps
+/**
+ * Creates steps data for the logged-in user
+ * @route POST /api/steps
+ * @access Private
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 export const createSteps = async ( req, res ) => {
 
     try {

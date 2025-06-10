@@ -1,7 +1,19 @@
 
+/**
+ * Description: This file handles water controllers
+ * Author: Fabio Kallina de Paula
+ * Created: June 6, 2025
+ */
+
 import Water from "../models/waterModel.js";
 
-//Get water data
+/**
+ * Get all water data for the logged-in user
+ * @route GET /api/water
+ * @access Private
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 export const getWater = async ( req, res ) => {
 
     try {
@@ -22,7 +34,13 @@ export const getWater = async ( req, res ) => {
     }
 }
 
-//Create water entry
+/**
+ * Create water data point for the logged-in user
+ * @route POST /api/water
+ * @access Private
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 export const createWater = async ( req, res ) => {
 
     try {

@@ -1,3 +1,10 @@
+
+/**
+ * Description: This file handles authentication controllers
+ * Author: Fabio Kallina de Paula
+ * Created: June 5, 2025
+ */
+
 import User from "../models/userModel.js";
 import Profile from "../models/profileModel.js";
 import bcrypt from "bcryptjs";
@@ -9,6 +16,13 @@ import { initializeHabitsForUser } from "../services/initializeUserHabits.js";
 
 dotenv.config();
 
+/**
+ * Create user registration for the logged-in user
+ * @route POSt /api/auth/register
+ * @access Private
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 export const createRegistration = async (req, res) => {
   const { name, email, password } = req.body;
   console.log("Registering new user:", name, email);
@@ -50,6 +64,13 @@ export const createRegistration = async (req, res) => {
   }
 };
 
+/**
+ * User LogIn
+ * @route POST /api/auth/login
+ * @access Private
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 export const authLogin = async (req, res) => {
   const { email, password } = req.body;
 
@@ -86,7 +107,13 @@ export const authLogin = async (req, res) => {
 import crypto from "crypto";
 import nodemailer from "nodemailer";
 
-// POST /api/auth/forgot-password
+/**
+ * Password retrieval
+ * @route POST /api/auth/forgot-password
+ * @access Private
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 export const forgotPassword = async (req, res) => {
   const { email } = req.body;
   try {
@@ -124,7 +151,13 @@ export const forgotPassword = async (req, res) => {
   }
 };
 
-// POST /api/auth/reset-password/:token
+/**
+ * Reset password
+ * @route POST /api/auth/forgot-password/:token
+ * @access Private
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 export const resetPassword = async (req, res) => {
   const { token } = req.params;
   const { password } = req.body;

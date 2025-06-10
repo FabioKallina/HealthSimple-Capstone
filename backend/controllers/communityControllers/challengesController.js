@@ -1,7 +1,13 @@
+
+/**
+ * Description: This file handles challenges controllers
+ * Author: Fabio Kallina de Paula
+ * Created: June 5, 2025
+ */
+
+
 import Challenge from "../../models/communityModels/challengesModel.js"; // static templates
 import ChallengeProgress from "../../models/communityModels/challengeProgressModel.js"; // user tracking
-
-import mongoose from "mongoose";
 
 const challengeTemplates = [
   {
@@ -27,7 +33,13 @@ const challengeTemplates = [
   },
 ];
 
-//Get challenges
+/**
+ * Get all challenges for the logged-in user
+ * @route GET /api/challenges
+ * @access Private
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 export const getChallenges = async (req, res) => {
   try {
     const userId = req.user.id;
@@ -69,7 +81,13 @@ export const getChallenges = async (req, res) => {
   }
 };
 
-//Join challenge
+/**
+ * Join challenge for the logged-in user
+ * @route POST /api/challenges/join
+ * @access Private
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 export const joinChallenge = async (req, res) => {
   const { challengeId } = req.body;
   const userId = req.user.id;
@@ -111,7 +129,13 @@ export const joinChallenge = async (req, res) => {
   }
 };
 
-//Complete challenge
+/**
+ * Complete challenge for the logged-in user
+ * @route POST /api/challenges/:id/done
+ * @access Private
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 export const completeChallenge = async (req, res) => {
   try {
     const { id } = req.params; // this is the challengeId

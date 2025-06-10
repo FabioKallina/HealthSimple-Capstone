@@ -1,7 +1,20 @@
+
+/**
+ * Description: This file handles profile controllers
+ * Author: Fabio Kallina de Paula
+ * Created: June 4, 2025
+ */
+
 import Profile from "../models/profileModel.js";
 import User from "../models/userModel.js";
 
-//Get profile
+/**
+ * Get all profile data for the logged-in user
+ * @route GET /api/profile
+ * @access Private
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 export const getProfile = async (req, res) => {
   try {
     const userId = req.user.id;
@@ -20,7 +33,13 @@ export const getProfile = async (req, res) => {
   }
 };
 
-//Update profile
+/**
+ * Update profile data for the logged-in user
+ * @route PUT /api/steps
+ * @access Private
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 export const updateProfile = async (req, res) => {
   try {
     const userId = req.user.id;
@@ -58,7 +77,13 @@ export const updateProfile = async (req, res) => {
   }
 };
 
-//Delete user and profile
+/**
+ * Delete logged-in user
+ * @route DELET /api/profile/delete
+ * @access Private
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
 export const deleteUser = async ( req, res ) => {
 
   try {
