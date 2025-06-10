@@ -1,4 +1,11 @@
 
+/**
+ * Authorization Routes
+ * Handles all authorization-related endpoints
+ * Author: Fabio Kallina de Paula
+ * Created: June 5, 2025
+ */
+
 import express from "express";
 import dotenv from "dotenv";
 import { authLogin, createRegistration, forgotPassword, resetPassword } from "../controllers/authController.js";

@@ -1,4 +1,12 @@
 
+/**
+ * Exercise Routes
+ * Handles all exercise-related endpoints
+ * All routes are protected and require JWT authentication
+ * Author: Fabio Kallina de Paula
+ * Created: June 6, 2025
+ */
+
 import express from "express";
 import { createExercise, getExercises } from "../controllers/exerciseController.js";
 import { authenticateToken } from "../middleware/authMiddleware.js";

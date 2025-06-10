@@ -1,4 +1,12 @@
 
+/**
+ * CheckIn Routes
+ * Handles all checkin-related endpoints
+ * All routes are protected and require JWT authentication
+ * Author: Fabio Kallina de Paula
+ * Created: June 5, 2025
+ */
+
 import express from "express";
 
 import {
