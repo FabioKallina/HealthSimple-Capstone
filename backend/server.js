@@ -51,9 +51,11 @@ const __dirname = path.dirname(__filename);
 
 // Serve React static files
 app.use(express.static(path.join(__dirname, "..", "frontend", "dist")));
+console.log("Serving frontend from:", path.join(__dirname, "..", "frontend", "dist"));
 
 // Catch-all to serve React app for client-side routing
 app.get(/^\/(?!api).*/, (req, res) => {
+  console.log("Catch-all route hit for:", req.url);
   res.sendFile(path.join(__dirname, "..", "frontend", "dist", "index.html"));
 });
 

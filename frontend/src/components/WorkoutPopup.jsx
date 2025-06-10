@@ -5,7 +5,7 @@ import SearchBar from "./SearchBar";
 import "../css/WorkoutPopup.css";
 import SetCard from "./SetCard";
 
-import { exercises as exerciseData, exercises } from "../constants/exercises";
+import { exercises as exerciseData } from "../constants/exercises";
 
 const BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
 
