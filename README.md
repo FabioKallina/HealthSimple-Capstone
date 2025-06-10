@@ -56,8 +56,8 @@ Whether you're just starting your fitness journey or looking for a comprehensive
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/healthsync.git
-cd healthsync
+git clone https://github.com/FabioKallina/HealthSync-Capstone.git
+cd HealthSync-Capstone
 ```
 
 ### 2. **Backend Set Up**
@@ -100,12 +100,13 @@ npm run dev
 ```
 
 ### 3. Set up Environment Variables
-This app uses the **OpenWeatherMap API**.. To run it locally, you need to set up your own OpenWeather APIKey.
-1. Go to https://openweathermap.org/ and **sign up** (or log in if you already have an account).
+This app uses the **Edamam API**.. To run it locally, you need to set up your own Edamam APIKey.
+1. Go to https://www.edamam.com/ and **sign up** (or log in if you already have an account).
 2. In your **Profile**, go to **My API Keys** and copy your API Key.
 3. Create a `.env` file in the root directory and add the following line: 
     ```ini
-   VITE_WEATHER_API_KEY=your-api-key
+    VITE_API_ID=your_api_id
+   VITE_APP_KEY=your_api_key
    ```
 
 ### 4. **Run the App**
@@ -152,8 +153,7 @@ npm run dev
 
 ### 🔗 APIs & Services
 
-- **OpenWeatherMap API** (optional, for weather data)
-- **External Nutrition/Food API**
+- **Edamam API**
 - **EmailJS or similar service** for email support (optional)
 
 ---
@@ -237,7 +237,6 @@ npm run dev
 ### 🔗 APIs & External Services
 
 - **Edamam API** – Food and nutrition data
-- **OpenWeatherMap API** – Weather data for user dashboards (optional)
 - **Render** – Hosting for backend and/or frontend
 - **EmailJS / Nodemailer** – Email integration for notifications
 
