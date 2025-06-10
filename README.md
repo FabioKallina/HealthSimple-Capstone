@@ -166,16 +166,18 @@ npm run dev
 - **Backend**: [Render](https://render.com)
 
 ## 📈 Future Improvements
--📱 Fully responsive mobile support / PWA version
--📅 Calendar-based activity view with drag/drop
--🔔 Daily email/push notifications for goals
--📤 Export data as CSV or PDF
--🧠 AI-driven personalized recommendations
--🔗 Google Fit / Apple Health / Fitbit integration
--💬 Real-time group chat or coaching features
--📊 Advanced data analytics & habit predictions
--📷 Upload progress photos
--🎯 Gamification with levels, points, and leaderboards
+
+- 📱 Fully responsive mobile support / PWA version  
+- 📅 Calendar-based activity view with drag & drop  
+- 🔔 Daily email/push notifications for goals  
+- 📤 Export data as CSV or PDF  
+- 🧠 AI-driven personalized recommendations  
+- 🔗 Google Fit / Apple Health / Fitbit integration  
+- 💬 Real-time group chat or coaching features  
+- 📊 Advanced data analytics & habit predictions  
+- 📷 Upload progress photos  
+- 🎯 Gamification with levels, points, and leaderboards  
+
 
 ## 👤 Author
 
