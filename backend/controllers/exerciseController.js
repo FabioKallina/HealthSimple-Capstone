@@ -1,4 +1,3 @@
-
 /**
  * Description: This file handles exercise controllers
  * Author: Fabio Kallina de Paula
@@ -55,6 +54,34 @@ export const createExercise = async (req, res) => {
     res.status(500).json({
       status: "error",
       message: "Failed to create exercise",
+      error: error.message,
+    });
+  }
+};
+
+/**
+ * Delete exercise for the logged-in user
+ * @route DELETE /api/exercises/:exerciseId
+ * @access Private
+ * @param {Object} req - Express request object
+ * @param {Object} res - Express response object
+ */
+export const deleteExercise = async (req, res) => {
+  try {
+    const { exerciseId } = req.params;
+    const deletedExercise = await Exercise.findOneAndDelete({
+      _id: exerciseId,
+      user: req.user.id, // Ensure only the owner can delete
+    });
+
+    res.status(200).json({
+      status: "success",
+      message: "Exercise deleted",
+    });
+  } catch (error) {
+    res.status(500).json({
+      status: "error",
+      message: "Failed to delete exercise",
       error: error.message,
     });
   }

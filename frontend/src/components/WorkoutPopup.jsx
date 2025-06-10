@@ -100,15 +100,11 @@ const WorkoutPopup = ({ onCancel, onWorkoutFinish }) => {
 
     try {
       const token = localStorage.getItem("token");
-      const res = await axios.post(
-        `${BASE_URL}/api/workout`,
-        workoutData,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
+      const res = await axios.post(`${BASE_URL}/api/workout`, workoutData, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
       if (onWorkoutFinish) onWorkoutFinish();
     } catch (e) {
       console.error("Error Saving Workout:", e);
@@ -135,8 +131,8 @@ const WorkoutPopup = ({ onCancel, onWorkoutFinish }) => {
         { name: newExerciseName, category: newExerciseCategory },
         { headers: { Authorization: `Bearer ${token}` } }
       );
-      console.log(newExerciseCategory, newExerciseCategory)
-      console.log(res.data.data)
+      console.log(newExerciseCategory, newExerciseCategory);
+      console.log(res.data.data);
 
       const created = res.data.data;
 
@@ -152,6 +148,29 @@ const WorkoutPopup = ({ onCancel, onWorkoutFinish }) => {
       handleAddExercise({ ...created, id: crypto.randomUUID() });
     } catch (e) {
       console.error("Failed to create exercise", e);
+    }
+  };
+
+  const handleDeleteUserExercise = async (exerciseId) => {
+    const token = localStorage.getItem("token");
+    try {
+      await axios.delete(`${BASE_URL}/api/exercises/${exerciseId}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      //Remove it from UI
+      setUserExercises((prev) =>
+        prev.filter((exercise) => exercise._id !== exerciseId)
+      );
+
+      //Clear from search results
+      setSearchResults((prev) =>
+        prev.filter((exercise) => exercise._id !== exerciseId)
+      );
+    } catch (e) {
+      console.error("Failed to delete exercise", e);
     }
   };
 
@@ -203,7 +222,16 @@ const WorkoutPopup = ({ onCancel, onWorkoutFinish }) => {
             <SearchBar searchQuery={searchQuery} handleSearch={handleSearch} />
             {searchResults.map((exercise) => (
               <div key={exercise.name} className="search-result-item">
-                <img className="list-img" src={exercise.image} />
+                {exercise.image ? (
+                  <img className="list-img" src={exercise.image} />
+                ) : (
+                  <button
+                    className="delete-ex-btn"
+                    onClick={() => handleDeleteUserExercise(exercise._id)}
+                  >
+                    ❌ Delete
+                  </button>
+                )}
                 <div className="list-items">
                   <span>{exercise.name}</span>
                   <button
@@ -244,8 +272,15 @@ const WorkoutPopup = ({ onCancel, onWorkoutFinish }) => {
                   <option value="shoulders">Shoulders</option>
                   <option value="abs">Abs</option>
                 </select>
-                <button onClick={handleCreateExercise}>Save Exercise</button>
-                <button onClick={() => setShowCreateForm(false)}>Cancel</button>
+                <button onClick={handleCreateExercise} className="save-ex-btn">
+                  Save Exercise
+                </button>
+                <button
+                  onClick={() => setShowCreateForm(false)}
+                  className="cancel-ex-btn"
+                >
+                  Cancel
+                </button>
               </div>
             )}
           </div>

@@ -8,7 +8,7 @@
  */
 
 import express from "express";
-import { createExercise, getExercises } from "../controllers/exerciseController.js";
+import { createExercise, deleteExercise, getExercises } from "../controllers/exerciseController.js";
 import { authenticateToken } from "../middleware/authMiddleware.js";
 
 const router = express.Router();
@@ -20,5 +20,8 @@ router.get("/", getExercises);
 
 //POST exercise
 router.post("/", createExercise);
+
+//DELETE exercise
+router.delete("/:exerciseId", deleteExercise);
 
 export default router;

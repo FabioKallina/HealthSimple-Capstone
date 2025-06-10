@@ -233,6 +233,27 @@
   -webkit-text-fill-color: white !important; /* Safari iOS fix */
 }
 
+.save-ex-btn {
+  color: white !important;
+  -webkit-text-fill-color: white !important; /* Safari iOS fix */
+}
+
+.cancel-ex-btn {
+  color: white !important;
+  -webkit-text-fill-color: white !important; /* Safari iOS fix */
+}
+
+.delete-ex-btn {
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 150px;
+}
+
 /* MEDIUM SCREENS (tablets, < 1024px) */
 @media (max-width: 1024px) {
 
