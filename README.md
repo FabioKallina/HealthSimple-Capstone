@@ -165,24 +165,6 @@ npm run dev
 - **Frontend**: [Render / Netlify / Vercel] (choose one or all)
 - **Backend**: [Render](https://render.com)
 
-### Notes
-
-- The **frontend `.env`** must point to your deployed backend API:
-
-```env
-VITE_API_BASE_URL=https://your-backend-url.onrender.com/api
-The backend must serve the built React app:
-
-js
-Copy
-Edit
-app.use(express.static(path.join(__dirname, "..", "frontend", "dist")));
-
-app.get(/^\/(?!api).*/, (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "frontend", "dist", "index.html"));
-});
-```
-
 ## 📈 Future Improvements
 -📱 Fully responsive mobile support / PWA version
 -📅 Calendar-based activity view with drag/drop
