@@ -69,16 +69,24 @@ export const createExercise = async (req, res) => {
 export const deleteExercise = async (req, res) => {
   try {
     const { exerciseId } = req.params;
-    const deletedExercise = await Exercise.findOneAndDelete({
-      _id: exerciseId,
-      user: req.user.id, // Ensure only the owner can delete
-    });
+    console.log("Attempting to delete exercise:", exerciseId);
+
+    const deletedExercise = await Exercise.findByIdAndDelete(exerciseId);
+
+    if (!deletedExercise) {
+      console.log("No matching exercise found with ID:", exerciseId);
+      return res.status(404).json({
+        status: "fail",
+        message: "Exercise not found",
+      });
+    }
 
     res.status(200).json({
       status: "success",
       message: "Exercise deleted",
     });
   } catch (error) {
+    console.error("Error deleting exercise:", error);
     res.status(500).json({
       status: "error",
       message: "Failed to delete exercise",
@@ -86,3 +94,4 @@ export const deleteExercise = async (req, res) => {
     });
   }
 };
+

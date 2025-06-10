@@ -134,6 +134,14 @@ const WorkoutPopup = ({ onCancel, onWorkoutFinish }) => {
       console.log(newExerciseCategory, newExerciseCategory);
       console.log(res.data.data);
 
+      const alreadyExists = [...exerciseData, ...userExercises].some(
+        (ex) => ex.name.toLowerCase() === newExerciseName.toLowerCase()
+      );
+      if (alreadyExists) {
+        alert("Exercise already exists.");
+        return;
+      }
+
       const created = res.data.data;
 
       // Update user exercises
@@ -220,8 +228,8 @@ const WorkoutPopup = ({ onCancel, onWorkoutFinish }) => {
         {showSearch && (
           <div className="search-display">
             <SearchBar searchQuery={searchQuery} handleSearch={handleSearch} />
-            {searchResults.map((exercise) => (
-              <div key={exercise.name} className="search-result-item">
+            {searchResults.map((exercise, idx) => (
+              <div key={idx} className="search-result-item">
                 {exercise.image ? (
                   <img className="list-img" src={exercise.image} />
                 ) : (
