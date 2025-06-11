@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Navigate, useNavigate } from "react-router-dom"
 
 import "../css/Home.css";
 
@@ -20,6 +21,17 @@ const getLocalDateString = () => {
 };
 
 const Home = () => {
+
+  const navigate = useNavigate();
+
+  //Check token on mount
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      navigate("/login"); //redirect if not logged in
+    }
+  }, []);
+
   const [selectedDate, setSelectedDate] = useState(getLocalDateString);
 
   const [loggedFoods, setLoggedFoods] = useState({
