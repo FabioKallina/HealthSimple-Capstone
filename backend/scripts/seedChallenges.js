@@ -26,7 +26,7 @@ const challengeTemplates = [
 ];
 
 const seedChallenges = async () => {
-  await mongoose.connect("mongodb+srv://fabiokallina8:QsW8CSAmKscLO7K0@cluster0.g4wdbzy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
+  await mongoose.connect(process.env.MONGO_URI);
   await Challenge.deleteMany();
   await Challenge.insertMany(challengeTemplates);
   console.log("Seeded challenges!");
