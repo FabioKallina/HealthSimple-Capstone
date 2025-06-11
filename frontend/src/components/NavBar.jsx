@@ -10,7 +10,7 @@ const NavBar = () => {
     <div className="navbar">
       <div className="navbar-logo">
         <img src="/logo1.png" alt="Logo" className="logo-img" />
-        <span className="logo-text">HealthSync</span>
+        <span className="logo-text">HealthSimple</span>
       </div>
 
       <div
