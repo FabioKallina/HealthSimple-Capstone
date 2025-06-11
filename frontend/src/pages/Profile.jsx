@@ -19,13 +19,13 @@ const avatars = [avatar1, avatar2, avatar3, avatar4, avatar5, avatar6, avatar7];
 const BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
 
 const Profile = () => {
-  const [bio, setBio] = useState("I love lifting and taking care of my body");
-  const [name, setName] = useState("");
+  const [bio, setBio] = useState("This is my bio");
+  const [name, setName] = useState("John Doe");
   const [editing, setEditing] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);
   const [userWorkouts, setUserWorkouts] = useState([]);
   const [friends, setFriends] = useState([]);
-  const [goals, setGoals] = useState(["Run 10km", "Stick to meal prep"]);
+  const [goals, setGoals] = useState(["This is my goal 1", "This is my goal 2"]);
   const [editingGoals, setEditingGoals] = useState(false);
   const [newGoal, setNewGoal] = useState("");
   const [deletePopUp, setDeletePopUp] = useState(false);
