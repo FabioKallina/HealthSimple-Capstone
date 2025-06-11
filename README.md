@@ -1,14 +1,14 @@
-# 💪 HealthSync
+# 💪 HealthSimple
 
-**HealthSync** is a full-stack wellness application designed to empower users to take control of their health by tracking workouts, nutrition, habits, water intake, weight, and more. It also enables users to connect with a community, participate in challenges, and monitor holistic progress over time.
+**HealthSimple** is a full-stack wellness application designed to empower users to take control of their health by tracking workouts, nutrition, habits, water intake, weight, and more. It also enables users to connect with a community, participate in challenges, and monitor holistic progress over time.
 
 ---
 
 ## 🧠 Project Overview
 
-HealthSync was built to help users manage and improve their physical and mental well-being through a unified platform. It integrates multiple health-tracking features in one place, supporting daily habit tracking, fitness planning, nutritional monitoring, and social motivation via challenges and friendships.
+HealthSimple was built to help users manage and improve their physical and mental well-being through a unified platform. It integrates multiple health-tracking features in one place, supporting daily habit tracking, fitness planning, nutritional monitoring, and social motivation via challenges and friendships.
 
-Whether you're just starting your fitness journey or looking for a comprehensive wellness tracker, HealthSync offers a streamlined, intuitive experience.
+Whether you're just starting your fitness journey or looking for a comprehensive wellness tracker, HealthSimple offers a streamlined, intuitive experience.
 
 ---
 
@@ -56,8 +56,8 @@ Whether you're just starting your fitness journey or looking for a comprehensive
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/FabioKallina/HealthSync-Capstone.git
-cd HealthSync-Capstone
+git clone https://github.com/FabioKallina/HealthSimple-Capstone.git
+cd HealthSimple-Capstone
 ```
 
 ### 2. **Backend Set Up**
@@ -195,8 +195,8 @@ Feel free to connect or reach out if you're interested in collaborating, have fe
 
 ```bash
 # 1. Clone the repository
-git clone https://FabioKallina/healthsync-capstone.git
-cd healthsync
+git clone https://FabioKallina/HealthSimple-capstone.git
+cd HealthSimple
 
 # 2. Backend setup
 cd backend
