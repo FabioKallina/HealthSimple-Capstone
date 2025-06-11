@@ -76,10 +76,14 @@ const Home = () => {
     fetchFoods();
   }, [selectedDate]);
 
+  const hasLoggedFoods = Object.values(loggedFoods)
+  .some((mealArray) => mealArray.length > 0);
+
   return (
     <div className="home-container">
 
-      <div className="nutrition-pie-chart">
+      {hasLoggedFoods ? (
+        <div className="nutrition-pie-chart">
         <NutritionPieChart
           foods={[
             ...loggedFoods.Breakfast,
@@ -89,6 +93,11 @@ const Home = () => {
           ]}
         />
       </div>
+      ) : (
+        <div style={{ backgroundColor: "#fff", borderRadius: 16, display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <p style={{ fontSize: 24 }}>No foods tracked yet</p>
+        </div>
+      )}
 
       <WorkoutStats />
 
